@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your CSS styles for the Create Account page */
+        
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .page-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: transparent;
+            margin-top: 120px;
+        }
+        
+        .registration-form {
+            text-align: center;
+        }
+        
+        .registration-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="tel"] {
+            width: 95%;
+            padding: 15px;
+            margin-bottom: 40px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .subscription-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .checkbox-label {
+            font-size: 14px;
+            color: azure;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .registration-form input[type="submit"] {
+            background-color: #25f4fb;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .registration-form .checkbox-label {
+            font-size: 14px;
+            margin-top: 10px;
+            color: azure;
+            display: inline-block;
+        }
+        /* Footer styles */
+        
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Roboto plus;
+            font-weight: bold;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu for the "Create Account" Page -->
+    <ul class="top-menu">
+        <li><a href="coverpage.html">Home</a></li>
+        <li><a href="main menu.html">Main Menu</a></li>
+        <li><a href="my-tasks.html">My Tasks</a></li>
+        <li><a href="wallet.html">My Wallet</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="page-container">
+        <!-- Create Account Page Content -->
+        <h1>Create Account</h1>
+
+        <!-- Registration Form -->
+        <form class="registration-form" id="registration-form">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number (optional)">
+
+            <!-- Sign Up button and Subscribe container -->
+            <div class="subscription-container">
+                <input type="submit" value="Sign Me Up">
+            </div>
+            <div class="subscription-container">
+                <label class="checkbox-label">
+            <input type="checkbox" name="subscribe"> Subscribe to receive more tasks
+        </label>
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2023<br>TranscribePlus-All Rights Reserved
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to handle form submission
+        document.getElementById("registration-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Retrieve form data
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+
+            // You can add your form validation or submission logic here
+            // For example, you can use JavaScript to send the form data to a server
+        });
+    </script>
+</body>
+
+</html>

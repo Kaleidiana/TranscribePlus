@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .top-menu li a {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: white !important;
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .top-menu li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: transparent;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            transform-origin: center;
+            transition: background-color 0.2s ease-in-out;
+        }
+        
+        .top-menu li a:hover::after,
+        .top-menu li a.active::after {
+            background-color: white;
+        }
+        
+        .top-menu {
+            position: absolute;
+            top: 16px;
+            right: 30px;
+            list-style-type: none;
+            margin: 8px;
+            padding: 4px;
+        }
+        
+        .top-menu li {
+            display: inline;
+            margin-left: 10px;
+            font-weight: 200;
+            font-size: 20px;
+            font-family: Roboto plus;
+        }
+        
+        .top-menu li a {
+            text-decoration: none;
+            color: aliceblue !important;
+            padding-bottom: 4px;
+        }
+        
+        .top-menu li a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform-origin: center;
+            transition: background-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+        
+        .top-menu li a:hover::after,
+        .top-menu li a.active::after {
+            width: 100%;
+        }
+        
+        .top-menu li:first-child {
+            margin-left: 0;
+        }
+        
+        .page-container {
+            max-width: 800px;
+            margin: 150px auto;
+            /* Adjust margin to move content downward */
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+        /* Additional styling for the "Account Sign In" heading */
+        
+        #account-heading {
+            color: white;
+            font-family: Courier, monospace;
+            font-size: 24px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        /* Style for login form */
+        
+        .login-form {
+            background-color: #000;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 16px;
+        }
+        
+        .login-form input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            /* Add margin to create space */
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .login-form input[type="submit"] {
+            background-color: #25f4fb;
+            color: black;
+            border: 2px solid #25f4fb;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        
+        .login-form input[type="submit"]:hover {
+            background-color: transparent;
+            /* Change the background color on hover */
+            color: white;
+            /* Change the text color on hover */
+        }
+        
+        .login-form a {
+            color: hsl(182, 96%, 56%);
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+        
+        .signup-link {
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .signup-link a {
+            color: #25f4fb;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu for the "My Tasks" Page -->
+    <ul class="top-menu">
+        <li><a href="coverpage.html">Home</a></li>
+        <li><a href="main menu.html">Main Menu</a></li>
+        <li><a href="my-tasks.html" class="active">My Tasks</a></li>
+        <li><a href="wallet.html">My Wallet</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- Account Sign In Heading -->
+    <h1 id="account-heading">Account Sign In</h1>
+
+    <div class="page-container">
+        <p>Sign in to your account to access your profile, history, and any private pages you've been granted access to.</p>
+
+
+        <!-- Login Form -->
+        <form class="login-form">
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <input type="submit" value="Sign In">
+        </form>
+
+        <a href="#">Reset Password</a>
+
+        <!-- Signup Link -->
+        <div class="signup-link">
+            Not a member? <a href="create account.html">Create Account</a>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // Get the current page URL
+        var currentPage = window.location.pathname.split('/').pop();
+
+        // Function to set the active link
+        function setActiveLink() {
+            var links = document.querySelectorAll('.top-menu li a');
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                var href = link.getAttribute('href');
+                if (currentPage === href) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
+        }
+
+        // Set the active link based on the current page
+        setActiveLink();
+    </script>
+
+
+
+</body>
+
+</html>

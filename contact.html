@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Include FontAwesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Your CSS styles for the Contact Us page */
+        
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .top-menu {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            /* Adjusted to align to the right */
+            list-style-type: none;
+            margin: 8px;
+            padding: 4px;
+        }
+        
+        .top-menu li a {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: white !important;
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .top-menu li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: transparent;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            transform-origin: center;
+            transition: background-color 0.2s ease-in-out;
+        }
+        
+        .top-menu li a:hover::after,
+        .top-menu li a.active::after {
+            background-color: white;
+        }
+        
+        .top-menu li {
+            display: inline;
+            margin-left: 10px;
+            font-weight: 200;
+            font-size: 20px;
+            font-family: Roboto plus;
+        }
+        
+        .top-menu li a {
+            text-decoration: none;
+            color: aliceblue !important;
+            padding-bottom: 4px;
+        }
+        
+        .top-menu li a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform-origin: center;
+            transition: background-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+        
+        .top-menu li a:hover::after,
+        .top-menu li a.active::after {
+            width: 100%;
+        }
+        
+        .top-menu li:first-child {
+            margin-left: 0;
+        }
+        
+        .page-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: transparent;
+            margin-top: 120px;
+        }
+        /* Additional styling for the contact information section */
+        
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .whatsapp-box {
+            background-color: white;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            color: black;
+        }
+        
+        .whatsapp-icon {
+            color: green;
+            font-size: 24px;
+        }
+        
+        .contact-method {
+            margin-top: 10px;
+        }
+        /* Footer styles */
+        
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Styles for the "Contact Us" heading */
+        
+        .contact-heading {
+            font-family: Courier, monospace;
+            font-size: 24px;
+            text-align: left;
+            /* Align to the left */
+            margin-left: 10px;
+            top: 0px;
+            left: 0px;
+            /* Adjust margin as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu for the "Contact Us" Page -->
+    <ul class="top-menu">
+        <li><a href="coverpage.html">Home</a></li>
+        <li><a href="main menu.html">Main Menu</a></li>
+        <li><a href="my-tasks.html">My Tasks</a></li>
+        <li><a href="wallet.html">My Wallet</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+
+    <div class="page-container">
+        <!-- Contact Us Page Content -->
+        <h1 class="contact-heading">Contact Us</h1>
+
+        <!-- Message -->
+        <p>We respond in minutes!</p>
+
+        <!-- WhatsApp Contact -->
+        <div class="contact-info">
+            <div class="whatsapp-box">
+                <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                <span>Message us on WhatsApp</span>
+            </div>
+            <p>TranscribePlus</p>
+            <p>Call us on: 07000000</p>
+            <!-- Gmail email link -->
+            <p>Email us at: <a href="mailto:transcribeplus@gmail.com">transcribeplus@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2023 TranscribePlus - All Rights Reserved
+    </div>
+
+</body>
+
+</html>
